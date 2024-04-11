@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+	<link rel="stylesheet"  href="css/bootstrap.min.css">
+<link rel="stylesheet"  href="css/bootstrap-icons.min.css">
+<script>
+function solve(){
+var c=document.getElementById('c').value;
+var f=(c*9/5)+32;
+document.getElementById('res').textContent="Degree in FAHRENHEIT =" + f
+} 		
+</script>
+</head>
+<body class="bg-warning-subtle">
+<main class="container py-5">
+<p class="text-end">
+<i class="bi bi-house"></i> <a href="index.html" class="text-dark text-decoration-none">Back To Index</a></p>
+<div class="row justify-content-center">
+<div class="col-6 bg-white p-5 shadow border">
+<p class="text-center display-6 text-success">CELSIUS TO FAHRENHEIT</p>
+<hr class="">
+<p>Type The Degree in CELSIUS</p>
+<input type="number" id="c" class="form-control">
+<button class="btn btn-success w-100 my-3" onclick="solve()">Convert to FAHRENHEIT</button>
+<p class="text-center text-success fw-bold" id="res">RESULT</p>
+</div>
+</div>
+</main>
+</body>
+</html>
+
+ 

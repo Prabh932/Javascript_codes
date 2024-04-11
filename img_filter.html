@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet"  href="css/bootstrap.min.css">
+	<link rel="stylesheet"  href="css/bootstrap-icons.min.css">
+
+	<style>
+	#pic{ 
+       filter:blur(0px) brightness(1) contrast(100%) grayscale(0%) hue-rotate(0deg)
+       invert(0%) opacity(100%) saturate(100%) sepia(0%); }
+
+
+	</style>
+	<script>
+	  function applyFilter(){
+	  	
+	  	var g=document.getElementById('g').value;
+	  	var h=document.getElementById('h').value;
+	  	var l=document.getElementById('l').value;
+	  	var b=document.getElementById('b').value;
+	  	var c=document.getElementById('c').value;
+	  	var i=document.getElementById('i').value;
+	  	var s=document.getElementById('s').value;
+	  	var e=document.getElementById('e').value;
+	  	var o=document.getElementById('o').value;
+
+var r="blur("+l+"px) brightness("+b+") contrast("+c+"%) grayscale("+g+"%) hue-rotate("+h+"deg) invert("+i+"%) opacity("+o+"%) saturate("+s+"%) sepia("+e+"%)";  
+document.getElementById('res').textContent="filter :" + r
+ document.getElementById('pic').style.filter=r;                                        
+
+	  } 	
+	</script>
+</head>
+<body class="bg-secondary-subtle">
+<main class="container py-5">
+<p class="text-end">
+<i class="bi bi-house"></i> <a href="index.html" class="text-dark text-decoration-none">Back To Index</a></p>
+<div class="row justify-content-center">
+<div  class="col-9 bg-white p-5 shadow border text-center">
+
+<img src="assets/kid.jpg" id="pic" class="w-75">	
+
+<p class="text-center fw-bold" id="res"></p>
+<div  class=" bg-white p-5 shadow border text-center">
+<label class="fw-bold mb-2">GrayScale</label>
+<input type="range" id="g" value="0" min="0" max="100"
+oninput="applyFilter()" class="form-range">
+<label class="fw-bold mb-2">Blur</label>
+<input type="range" id="l" value="0" min="0" max="20"
+oninput="applyFilter()" class="form-range">
+<label class="fw-bold mb-2">Hue-Rotate</label>
+<input type="range" id="h" value="0" min="0" max="360"
+oninput="applyFilter()" class="form-range">
+<label class="fw-bold mb-2">Brightness</label>
+<input type="range" id="b" step="0.1" value="1" min="0" max="2"
+oninput="applyFilter()" class="form-range">
+<label class="fw-bold mb-2">Contrast</label>
+<input type="range" id="c" value="100" min="0" max="400"
+oninput="applyFilter()" class="form-range">
+<label class="fw-bold mb-2">Saturate</label>
+<input type="range" id="s" value="100" min="0" max="1000"
+oninput="applyFilter()" class="form-range">
+<label class="fw-bold mb-2">Sepia</label>
+<input type="range" id="e" value="0" min="0" max="100"
+oninput="applyFilter()" class="form-range">
+<label class="fw-bold mb-2">Opacity</label>
+<input type="range" id="o" value="100" min="0" max="100"
+oninput="applyFilter()" class="form-range">
+<label class="fw-bold mb-2">Invert</label>
+<input type="range" id="i" value="0" min="0" max="100"
+oninput="applyFilter()" class="form-range">
+</div>
+
+</main>
+</body>
+</html>

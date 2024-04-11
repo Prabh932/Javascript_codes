@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<link rel="stylesheet"  href="css/bootstrap.min.css">
+<link rel="stylesheet"  href="css/bootstrap-icons.min.css">
+<script>
+function solve() {
+    var s=parseInt(document.getElementById('s').value);
+   	  var b=parseInt(document.getElementById('b').value);
+   	  var d=parseInt(document.getElementById('d').value);
+   	  var r=s+b-d;
+   	  document.getElementById('res').textContent="Result =" + r
+		}		
+</script>
+</head>
+<body class="bg-warning-subtle">
+<main class="container py-5">
+	<p class="text-end">
+<i class="bi bi-house"></i> <a href="index.html" class="text-dark text-decoration-none">Back To Index</a></p>
+
+<div class="row justify-content-center">
+<div class="col-6 bg-white p-5 shadow border">
+<p class="text-center display-6 text-success">EMPLOY SHEET</p>
+<hr class="w-100">
+<label>SALARY</label>
+<input type="number" id="s" min="0" max="100" value="0" class="form-control">
+<label>BONUS</label>
+<input type="number" id="b" min="0" max="100" value="0" class="form-control">		
+<label>DEDUCTION</label>
+<input type="number" id="d" min="0" max="100" value="0" class="form-control">	
+<button class="btn btn-success mt-3" onclick="solve()">CALCULATE</button>
+<p class="text-center fw-bold text-success" id="res">RESULT</p>
+</div>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet"  href="css/bootstrap.min.css">
+<link rel="stylesheet"  href="css/bootstrap-icons.min.css">
+<style>
+#r{accent-color: red !important}
+#g{accent-color: green}
+#b{accent-color: blue}
+</style>
+<script>
+ function rgbcolor(){
+   	  var r=document.getElementById('r').value;
+      var g=document.getElementById('g').value;
+      var b=document.getElementById('b').value;
+      var s="rgb("+r+", "+g+", "+b+")";
+      document.getElementById('code').textContent=s;
+      document.getElementById('clr').style.backgroundColor=s;
+      document.body.style.backgroundColor=s;
+      }
+ </script>
+</head>
+<body style="background-color: rgb(62,58,110);">
+<main class="container py-5 ">
+<p class="text-end">
+<a href="index.html" class="btn  btn-light text-dark text-decoration-none"> <i class="bi bi-house"></i>  Back To Index</a></p>
+<div class="row justify-content-center">
+<div class="col-6 bg-white p-5 shadow border">
+<h1 class="text-center display-6 ">RGB Color Selector</h1>
+<hr class="w-100" >
+<p class="text-center fw-bold" id="code">rgb(62,58,110)</p>
+<p class="py-5" id="clr" style="background-color: rgb(62,58,110);"></p>
+<label class="fw-bold">RED</label>
+<input type="range" id="r"  min="0" max="255" value="62" oninput="rgbcolor()" class="w-100">
+<label class="fw-bold">GREEN</label>
+<input type="range" id="g"  min="0" max="255" value="58" oninput="rgbcolor()" class="w-100">
+<label class="fw-bold">BLUE</label>
+<input type="range" id="b"  min="0" max="255" value="110" oninput="rgbcolor()" class="w-100">
+</div>
+</div></div>
+</main>
+</body>
+</html>
